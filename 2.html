@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 2</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            padding: 50px;
+            background: linear-gradient(135deg, #6b6bff, #99b1ff);
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            font-size: 3em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <h1>Page 2</h1>
+    <script>
+        let count = parseInt(localStorage.getItem('count') || '0');
+        if (count < 6) {
+            localStorage.setItem('count', count + 1);
+            window.location.href = '1.html';
+        } else {
+            localStorage.removeItem('count'); 
+        }
+    </script>
+</body>
+</html>
